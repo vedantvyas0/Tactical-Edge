@@ -1,0 +1,21 @@
+body {
+    font-family: "Montserrat";
+    color: #fff;
+}
+
+h1 {
+    font-size: 64px !important;
+    line-height: 80px !important;
+    font-weight: 600 !important;
+}
+
+h2 {
+    font-size: 48px !important;
+    line-height: 56px !important;
+    font-weight: 600px !important;
+}
+
+p {
+    font-size: 16px !important;
+    line-height: 24px !important;
+}
