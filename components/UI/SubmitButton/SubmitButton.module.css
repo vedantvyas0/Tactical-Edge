@@ -1,0 +1,12 @@
+.submitBtn {
+    background-color: var(--primary-color);
+    color: #fff;
+    width: 300px;
+    height: 54px;
+    border-radius: 10px;
+    font-size: 16px !important;
+    line-height: 24px;
+    font-weight: 700px !important;
+    font-family: "Montserrat";
+    text-align: center;
+}

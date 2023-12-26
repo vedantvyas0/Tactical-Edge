@@ -1,0 +1,17 @@
+.moviecard {
+    background-color: var(--card-color);
+    width: 282px;
+    height: 504px;
+}
+
+.movieTitle {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 32px;
+}
+
+.publishingYear {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+}

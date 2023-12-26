@@ -1,0 +1,12 @@
+.signInForm {
+    width: 300px;
+    height: 360px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 190px;
+}
+
+.checkbox {
+    color: #fff;
+    padding-left: 20px;
+}

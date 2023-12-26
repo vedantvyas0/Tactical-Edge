@@ -1,0 +1,29 @@
+.input {
+    background-color: var(--input-color);
+    width: 300px;
+    height: 45px;
+    color: #fff;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    border-radius: 10px;
+    padding-left: 16px;
+}
+
+.input:focus {
+    color: var(--input-color);
+    background-color: #fff !important;
+    border: 1px solid black !important;
+}
+
+.inputError {
+    border: 1px solid var(--error-color);
+    background-color: #fff;
+    width: 300px;
+    height: 45px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    border-radius: 10px;
+    padding-left: 16px;
+}
