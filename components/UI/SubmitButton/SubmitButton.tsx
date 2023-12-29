@@ -1,12 +1,21 @@
-import styles from "./SubmitButton.module.css";
+// CustomSubmitButton.tsx
+import React from "react";
+import Styles from "./SubmitButton.module.css";
 
-interface SubmitButtonProps {
+interface CustomSubmitButtonProps {
     title: string;
+    onClick: () => void;
 }
-export default function SubmitButton({ title }: SubmitButtonProps) {
+
+const CustomSubmitButton: React.FC<CustomSubmitButtonProps> = ({
+    title,
+    onClick,
+}) => {
     return (
-        <>
-            <button className={styles.submitBtn}>{title}</button>
-        </>
+        <button type="button" onClick={onClick} className={Styles.submitBtn}>
+            {title}
+        </button>
     );
-}
+};
+
+export default CustomSubmitButton;

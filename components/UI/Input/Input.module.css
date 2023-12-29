@@ -10,10 +10,22 @@
     padding-left: 16px;
 }
 
+.inputDate {
+    width: 216px;
+}
+
+.inputTitle {
+    width: 346px;
+}
+
 .input:focus {
     color: var(--input-color);
     background-color: #fff !important;
     border: 1px solid black !important;
+}
+
+.input:focus-visible {
+    outline-offset: none;
 }
 
 .inputError {
@@ -26,4 +38,22 @@
     line-height: 24px;
     border-radius: 10px;
     padding-left: 16px;
+}
+
+@media (max-width: 768px) {
+    .inputDate {
+        width: 300px;
+    }
+    .inputTitle {
+        width: 300px;
+    }
+}
+
+@media (max-width: 962px) {
+    .inputDate {
+        width: 300px;
+    }
+    .inputTitle {
+        width: 300px;
+    }
 }
