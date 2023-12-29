@@ -50,7 +50,7 @@ const SignInForm: React.FC = () => {
         // Add your logic for form submission
         try {
             const response = await axios.post(
-                `http://localhost:5000/api/auth/login`,
+                `http://3.144.22.101/api/auth/login`,
                 data
             );
             if (response.status === 200) {

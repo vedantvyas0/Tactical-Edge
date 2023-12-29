@@ -44,11 +44,17 @@ export default function MovieList() {
             axios.defaults.headers.get["Authorization"] = token;
             axios.defaults.headers.common["Content-Type"] = "application/json";
 
-            const response = await axios.get(
-                `http://3.144.22.101/api/movies?page=${moviesData.page}&limit=${moviesData.limit}`
-            );
+            const response = await axios.get('http://3.144.22.101/api/movies', {
+                params: {
+                    page: moviesData.page,
+                    limit: moviesData.limit
+                },
+                headers: {
+                    Authorization: token,
+                    'Content-Type': 'application/json'
+                }
+            });
             const data = await response.data;
-            console.log("dd", data);
             setMoviesData(data);
         } catch (error) {
             console.error("Error fetching movies:", error);

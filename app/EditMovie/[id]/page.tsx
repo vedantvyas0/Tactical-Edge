@@ -39,7 +39,7 @@ export default function EditPage({ params }: EditPageProps) {
             axios.defaults.headers.common["Content-Type"] = "application/json";
 
             const response = await axios.get(
-                `http://localhost:5000/api/movies/${params.id}`
+                `http://3.144.22.101/api/movies/${params.id}`
             );
             const data = await response.data;
             console.log("Movie Data:", data);
