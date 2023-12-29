@@ -1,17 +1,33 @@
 .moviecard {
     background-color: var(--card-color);
-    width: 282px;
-    height: 504px;
+    /* width: 282px; */
+    /* height: 504px; */
+    /* min-width: 180px; */
+    padding: 10px;
+    border-radius: 12px;
+}
+
+.navbtn {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.flexContainer {
+    row-gap: 10px;
 }
 
 .movieTitle {
+    font-family: "Montserrat", sans-serif;
     font-size: 20px;
     font-weight: 500;
     line-height: 32px;
+    margin-top: 20px;
 }
 
 .publishingYear {
+    font-family: "Montserrat", sans-serif;
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
+    margin-top: 20px;
 }

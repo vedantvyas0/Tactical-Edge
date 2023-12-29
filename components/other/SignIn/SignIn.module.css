@@ -10,3 +10,29 @@
     color: #fff;
     padding-left: 20px;
 }
+
+.toast {
+    height: 16px;
+    height: 16px;
+}
+
+.errorMsg {
+    color: var(--error-color);
+    min-height: 16px;
+    text-align: left;
+}
+
+.checkbox {
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .signInForm {
+        margin-top: 140px;
+    }
+
+    .signIn {
+        font-size: 48px !important;
+        line-height: 56px !important;
+    }
+}
