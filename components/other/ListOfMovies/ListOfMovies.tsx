@@ -33,6 +33,7 @@ const ListOfMovies: React.FC<ListOfMoviesProps> = ({
 
     const totalPages = Math.ceil(totalMovies / itemsPerPage);
 
+
     const handlePrevClick = () => {
         if (currentPage > 1) {
             onPageChange(currentPage - 1);
@@ -55,6 +56,7 @@ const ListOfMovies: React.FC<ListOfMoviesProps> = ({
                         key={movie._id}
                         className={`${Styles.moviecard} mx-auto sm:flex-basis-1/2 md:flex-basis-1/3 lg:flex-basis-1/4`}
                     >
+
                         <Link href={`/EditMovie/${movie._id}`}>
                             <Image
                                 alt={movie.title}
@@ -71,6 +73,7 @@ const ListOfMovies: React.FC<ListOfMoviesProps> = ({
                         </Link>
                     </div>
                 ))}
+
             </div>
             <div className="mx-auto mt-6 flex gap-x-3 justify-center text-center">
                 <button
