@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        domains: ['tactical-uploads.s3.us-east-2.amazonaws.com', 'tactical-uploads.s3.amazonaws.com'], // Add your multiple domains here
+        domains: ['tactical-uploads.s3.us-east-2.amazonaws.com', 'tactical-uploads.s3.amazonaws.com'],
     },
 
 }
 
-module.exports = nextConfig
+module.exports = nextConfig;

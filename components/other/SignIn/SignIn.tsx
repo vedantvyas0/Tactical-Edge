@@ -66,7 +66,7 @@ const SignInForm: React.FC = () => {
             }
         } catch (error) {
             console.log("Login failed:");
-            toast.error(`Login failed.${error.message}`);
+            toast.error(`Login failed`);
             // Handle login error, e.g., display an error message to the user
         }
     };

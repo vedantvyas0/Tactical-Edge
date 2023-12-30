@@ -1,19 +1,20 @@
-// Input.tsx
 import React from "react";
 import {
+    Control,
     UseFormSetValue,
-    FieldValues,
     FieldPath,
-    FieldValuesFromControl,
+    UseFormReset,
+    SubmitHandler,
 } from "react-hook-form";
 import { Controller } from "react-hook-form";
 import styles from "./Input.module.css";
 
 interface InputProps {
     placeholder: string;
-    control: FieldValuesFromControl<any>; // Control object from RHF
-    setValue?: UseFormSetValue<any>; // setValue function from RHF
-    name: FieldPath<FieldValues>;
+    control: Control<any>; // Use Control with explicit form data type
+    setValue?: UseFormSetValue<any>;
+    reset?: UseFormReset<any>; // Add reset with explicit form data type
+    name: FieldPath<any>;
     value?: string;
     defaultValue?: string;
 }
@@ -22,6 +23,7 @@ const Input: React.FC<InputProps> = ({
     placeholder,
     control,
     setValue,
+    reset,
     name,
     defaultValue,
 }) => {
@@ -39,10 +41,10 @@ const Input: React.FC<InputProps> = ({
                                 ? `${styles.input} ${styles.inputTitle}`
                                 : styles.input
                         }
-                        {...field} // Includes onChange, onBlur, value, etc.
+                        {...field}
                         onChange={e => {
-                            setValue && setValue(name, e.target.value); // Update RHF form state
-                            field.onChange(e); // Trigger RHF's onChange
+                            setValue && setValue(name, e.target.value);
+                            field.onChange(e);
                         }}
                         placeholder={placeholder}
                         name={name}
