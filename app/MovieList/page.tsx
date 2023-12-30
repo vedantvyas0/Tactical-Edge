@@ -8,7 +8,7 @@ import ListOfMovies from "../../components/other/ListOfMovies/ListOfMovies";
 import { useRouter } from "next/navigation";
 
 interface Movie {
-    id: string;
+    _id: string;
     title: string;
     publishing_year: string;
     user_id: string;

@@ -50,7 +50,7 @@ const SignInForm: React.FC = () => {
         // Add your logic for form submission
         try {
             const response = await axios.post(
-                `http://localhost:5000/api/auth/login`,
+                `http://3.144.22.101/api/auth/login`,
                 data
             );
             if (response.status === 200) {
@@ -66,7 +66,7 @@ const SignInForm: React.FC = () => {
             }
         } catch (error) {
             console.log("Login failed:");
-            toast.error(`Login failed.${error.message}`);
+            toast.error(`Login failed`);
             // Handle login error, e.g., display an error message to the user
         }
     };

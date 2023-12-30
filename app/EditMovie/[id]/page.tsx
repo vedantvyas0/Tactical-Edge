@@ -12,7 +12,7 @@ interface EditPageProps {
 }
 
 interface Movie {
-    id: string;
+    _id: string;
     title: string;
     publishing_year: string;
     user_id: string;
@@ -58,7 +58,6 @@ export default function EditPage({ params }: EditPageProps) {
             {error && <p>Error: {error}</p>}
             {movieData && (
                 <>
-                    <p>Edit Page for ID: {params.id} </p>
                     <EditMovieForm defaultValues={movieData} />
                 </>
             )}

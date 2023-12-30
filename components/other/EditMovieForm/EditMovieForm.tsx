@@ -17,6 +17,15 @@ const ACCEPTED_IMAGE_TYPES = [
     "image/webp",
 ];
 
+interface EditMovieFormProps {
+    defaultValues?: {
+        title: string;
+        publishing_year: string;
+        image?: FileList;
+        // ... other fields as needed
+    };
+}
+
 const schema = z.object({
     title: z
         .string()
@@ -33,10 +42,10 @@ const schema = z.object({
 interface FormData {
     title: string;
     publishing_year: string;
-    image: FileList;
+    image?: FileList;
 }
 
-export default function EditMovieForm() {
+export default function EditMovieForm({ defaultValues }: EditMovieFormProps) {
     const {
         control,
         handleSubmit,
@@ -45,12 +54,11 @@ export default function EditMovieForm() {
         formState: { errors },
     } = useForm<FormData>({
         resolver: zodResolver(schema),
+        defaultValues,
     });
     const fileInputRef = useRef<HTMLInputElement | null>(null);
     const thumbnailRef = useRef<HTMLImageElement | null>(null);
     const [imageFile, setImageFile] = useState<any>(null);
-
-    console.log(errors);
 
     const handleFileInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const selectedFile = e.target.files?.[0];

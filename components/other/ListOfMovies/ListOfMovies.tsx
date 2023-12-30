@@ -2,9 +2,10 @@
 import React from "react";
 import Image from "next/image";
 import Styles from "./ListOfMovies.module.css";
+import Link from "next/link";
 
 interface Movie {
-    id: string;
+    _id: string;
     title: string;
     publishing_year: string;
     image_url?: string;
@@ -32,8 +33,6 @@ const ListOfMovies: React.FC<ListOfMoviesProps> = ({
 
     const totalPages = Math.ceil(totalMovies / itemsPerPage);
 
-    console.log("dd", displayedMovies);
-
     const handlePrevClick = () => {
         if (currentPage > 1) {
             onPageChange(currentPage - 1);
@@ -53,22 +52,23 @@ const ListOfMovies: React.FC<ListOfMoviesProps> = ({
             >
                 {displayedMovies.map(movie => (
                     <div
-                        key={movie.id}
+                        key={movie._id}
                         className={`${Styles.moviecard} mx-auto sm:flex-basis-1/2 md:flex-basis-1/3 lg:flex-basis-1/4`}
                     >
-                        {}{" "}
-                        <Image
-                            alt={movie.title}
-                            title={movie.title}
-                            width={180}
-                            height={400}
-                            src={`${movie?.image_url}`}
-                            className=" max-w-full  h-auto mx-auto"
-                        />
-                        <p className={Styles.movieTitle}>{movie.title}</p>
-                        <p className={Styles.publishingYear}>
-                            {movie.publishing_year}
-                        </p>
+                        <Link href={`/EditMovie/${movie._id}`}>
+                            <Image
+                                alt={movie.title}
+                                title={movie.title}
+                                width={266}
+                                height={400}
+                                src={`${movie?.image_url}`}
+                                className=" max-w-full object-fill  h-auto mx-auto"
+                            />
+                            <p className={Styles.movieTitle}>{movie.title}</p>
+                            <p className={Styles.publishingYear}>
+                                {movie.publishing_year}
+                            </p>
+                        </Link>
                     </div>
                 ))}
             </div>
