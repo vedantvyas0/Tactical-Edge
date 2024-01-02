@@ -75,7 +75,11 @@ export default function MovieList() {
     };
 
     if (loading) {
-        return <p className="h-full">Loading...</p>;
+        return (
+            <p className="flex justify-center align-middle my-10 min-h-screen">
+                Loading...
+            </p>
+        );
     }
 
     return (

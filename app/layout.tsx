@@ -29,12 +29,7 @@ export default function RootLayout({
                     crossOrigin="anonymous"
                 />
             </Head>
-            <body
-                className={inter.className}
-                style={{
-                    height: "100vh",
-                }}
-            >
+            <body className={inter.className}>
                 {children}
                 <FooterDesign />
             </body>

@@ -103,6 +103,11 @@ const ListOfMovies: React.FC<ListOfMoviesProps> = ({
                         key={index + 1}
                         onClick={() => onPageChange(index + 1)}
                         disabled={currentPage === index + 1}
+                        className={
+                            currentPage === index + 1
+                                ? `${Styles.activePageButton}`
+                                : ""
+                        }
                     >
                         {index + 1}
                     </button>

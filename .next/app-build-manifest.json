@@ -1,32 +1,22 @@
 {
   "pages": {
     "/_not-found": [
-      "static/chunks/webpack-faa63c477e8483bf.js",
+      "static/chunks/webpack-f7cef52e65ad091f.js",
       "static/chunks/fd9d1056-a75fe3ba478e1b58.js",
       "static/chunks/938-99f8db49fa658888.js",
       "static/chunks/main-app-501060bf60a85da0.js",
       "static/chunks/app/_not-found-f9f32029a035af2d.js"
     ],
     "/layout": [
-      "static/chunks/webpack-faa63c477e8483bf.js",
+      "static/chunks/webpack-f7cef52e65ad091f.js",
       "static/chunks/fd9d1056-a75fe3ba478e1b58.js",
       "static/chunks/938-99f8db49fa658888.js",
       "static/chunks/main-app-501060bf60a85da0.js",
-      "static/css/efb3652415afc850.css",
-      "static/chunks/app/layout-ab35392361236faa.js"
-    ],
-    "/CreateMovie/page": [
-      "static/chunks/webpack-faa63c477e8483bf.js",
-      "static/chunks/fd9d1056-a75fe3ba478e1b58.js",
-      "static/chunks/938-99f8db49fa658888.js",
-      "static/chunks/main-app-501060bf60a85da0.js",
-      "static/chunks/630-127c52e659dd5ad3.js",
-      "static/chunks/329-c3b810228afe2b70.js",
-      "static/css/21587d94da963967.css",
-      "static/chunks/app/CreateMovie/page-249daac2ad9fa168.js"
+      "static/css/ec4ad334c3268ce1.css",
+      "static/chunks/app/layout-4bf5a11f7b001f08.js"
     ],
     "/EditMovie/[id]/page": [
-      "static/chunks/webpack-faa63c477e8483bf.js",
+      "static/chunks/webpack-f7cef52e65ad091f.js",
       "static/chunks/fd9d1056-a75fe3ba478e1b58.js",
       "static/chunks/938-99f8db49fa658888.js",
       "static/chunks/main-app-501060bf60a85da0.js",
@@ -35,25 +25,35 @@
       "static/css/52ac94db0fc7db33.css",
       "static/chunks/app/EditMovie/[id]/page-bd4a83baa11bc540.js"
     ],
+    "/CreateMovie/page": [
+      "static/chunks/webpack-f7cef52e65ad091f.js",
+      "static/chunks/fd9d1056-a75fe3ba478e1b58.js",
+      "static/chunks/938-99f8db49fa658888.js",
+      "static/chunks/main-app-501060bf60a85da0.js",
+      "static/chunks/630-127c52e659dd5ad3.js",
+      "static/chunks/329-c3b810228afe2b70.js",
+      "static/css/21587d94da963967.css",
+      "static/chunks/app/CreateMovie/page-249daac2ad9fa168.js"
+    ],
     "/EditMovie/page": [
-      "static/chunks/webpack-faa63c477e8483bf.js",
+      "static/chunks/webpack-f7cef52e65ad091f.js",
       "static/chunks/fd9d1056-a75fe3ba478e1b58.js",
       "static/chunks/938-99f8db49fa658888.js",
       "static/chunks/main-app-501060bf60a85da0.js",
       "static/chunks/app/EditMovie/page-859b25a0946679e9.js"
     ],
     "/MovieList/page": [
-      "static/chunks/webpack-faa63c477e8483bf.js",
+      "static/chunks/webpack-f7cef52e65ad091f.js",
       "static/chunks/fd9d1056-a75fe3ba478e1b58.js",
       "static/chunks/938-99f8db49fa658888.js",
       "static/chunks/main-app-501060bf60a85da0.js",
       "static/chunks/630-127c52e659dd5ad3.js",
       "static/chunks/360-6eaceeb53b4d4c48.js",
-      "static/css/2644f6773267ddac.css",
-      "static/chunks/app/MovieList/page-d021224f0e8ff93c.js"
+      "static/css/9225fac8f4839b29.css",
+      "static/chunks/app/MovieList/page-053c61cbf4dd408c.js"
     ],
     "/page": [
-      "static/chunks/webpack-faa63c477e8483bf.js",
+      "static/chunks/webpack-f7cef52e65ad091f.js",
       "static/chunks/fd9d1056-a75fe3ba478e1b58.js",
       "static/chunks/938-99f8db49fa658888.js",
       "static/chunks/main-app-501060bf60a85da0.js",

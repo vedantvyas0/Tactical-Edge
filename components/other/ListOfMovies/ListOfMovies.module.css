@@ -7,6 +7,13 @@
     border-radius: 12px;
 }
 
+.activePageButton {
+    background-color: var(--primary-color);
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+}
+
 .navbtn {
     font-size: 16px;
     font-weight: 700;
@@ -14,6 +21,12 @@
 
 .flexContainer {
     row-gap: 10px;
+    height: calc(100vh - 300px);
+    overflow: auto;
+}
+
+.flexContainer::-webkit-scrollbar {
+    width: 0;
 }
 
 .movieTitle {
