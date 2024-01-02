@@ -29,8 +29,8 @@ export default function RootLayout({
                     crossOrigin="anonymous"
                 />
             </Head>
-            <body className={`${inter.className} h-full`}>
-                {children}
+            <body className={inter.className}>
+                <div className="children">{children}</div>
                 <FooterDesign />
             </body>
         </html>

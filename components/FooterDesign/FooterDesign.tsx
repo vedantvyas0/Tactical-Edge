@@ -1,4 +1,3 @@
-"use Client";
 import Styles from "./FooterDesign.module.css";
 
 export default function FooterDesign() {
