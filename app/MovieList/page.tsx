@@ -87,7 +87,7 @@ export default function MovieList() {
     if (moviesData.data.length === 0) {
         return (
             <ProtectedRoute>
-                <div className="h-screen">
+                <div>
                     <div className="flex flex-col  row-span-3 mx-auto text-center align-middle justify-center mt-40">
                         <h2>Your movie list is empty</h2>
                         <button
@@ -105,7 +105,7 @@ export default function MovieList() {
     return (
         <ProtectedRoute>
             <div className="container mx-auto">
-                <div className="flex justify-between mx-10 my-10 h-full ">
+                <div className="flex justify-between mx-10 my-10">
                     <h2
                         className={`${Styles.mymovie} flex align-bottom gap-2 items-center`}
                     >

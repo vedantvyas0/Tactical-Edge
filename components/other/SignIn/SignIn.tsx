@@ -73,7 +73,7 @@ const SignInForm: React.FC = () => {
 
     return (
         <>
-            <div className="container mx-auto my-auto ">
+            <div className="container mx-auto my-auto">
                 <div className={Styles.signInForm}>
                     <h1 className={`${Styles.signIn} my-5`}>Sign in</h1>
                     <ToastContainer
