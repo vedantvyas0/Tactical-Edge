@@ -75,7 +75,7 @@ export default function MovieList() {
     };
 
     if (loading) {
-        return <p>Loading...</p>;
+        return <p className="h-full">Loading...</p>;
     }
 
     return (

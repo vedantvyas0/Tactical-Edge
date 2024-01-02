@@ -4,6 +4,7 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 
 import Head from "next/head";
+import FooterDesign from "@/components/FooterDesign/FooterDesign";
 
 const inter = Montserrat({ subsets: ["latin"] });
 
@@ -28,7 +29,10 @@ export default function RootLayout({
                     crossOrigin="anonymous"
                 />
             </Head>
-            <body className={inter.className}>{children}</body>
+            <body className={inter.className}>
+                {children}
+                <FooterDesign />
+            </body>
         </html>
     );
 }

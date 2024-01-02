@@ -9,7 +9,9 @@
 .checkbox {
     color: var(--input-color) !important;
     background-color: var(--input-color) !important;
+    border-color: var(--input-color) !important;
     padding-left: 20px;
+    opacity: 0.3;
 }
 
 .toast {

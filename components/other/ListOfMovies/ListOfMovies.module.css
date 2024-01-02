@@ -1,8 +1,8 @@
 .moviecard {
     background-color: var(--card-color);
-    /* width: 282px; */
-    /* height: 504px; */
-    /* min-width: 180px; */
+    width: 282px;
+    height: 504px;
+    min-width: 180px;
     padding: 10px;
     border-radius: 12px;
 }
