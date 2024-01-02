@@ -118,7 +118,7 @@ const SignInForm: React.FC = () => {
                                 Remember me
                             </label>
                             <SubmitButton
-                                title="Submit"
+                                title="Login"
                                 onClick={() => handleSubmit(onSubmit)()}
                             />
                         </div>

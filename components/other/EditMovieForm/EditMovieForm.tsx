@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Styles from "./EditMovieForm.module.css";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { z } from "zod";
@@ -107,7 +107,7 @@ export default function EditMovieForm({ defaultValues }: EditMovieFormProps) {
                 formData,
                 {
                     headers: {
-                        Authorization: `Bearer ${token}`,
+                        Authorization: `${token}`,
                     },
                 }
             );
@@ -118,6 +118,14 @@ export default function EditMovieForm({ defaultValues }: EditMovieFormProps) {
         } finally {
         }
     };
+
+    useEffect(() => {
+        // Set default image file when the component mounts
+        if (defaultValues?.image) {
+            setImageFile(defaultValues.image[0]);
+            console.log("iimg", defaultValues.image[0]);
+        }
+    }, [defaultValues]);
 
     return (
         <>
@@ -191,7 +199,7 @@ export default function EditMovieForm({ defaultValues }: EditMovieFormProps) {
                                 Cancel
                             </button>
                             <button className={Styles.submitBtn} type="submit">
-                                Submit
+                                Update
                             </button>
                         </div>
                     </div>
@@ -205,7 +213,7 @@ export default function EditMovieForm({ defaultValues }: EditMovieFormProps) {
                         Cancel
                     </button>
                     <button className={Styles.submitBtn} type="submit">
-                        Submit
+                        Update
                     </button>
                 </div>
             </form>

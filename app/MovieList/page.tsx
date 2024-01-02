@@ -6,6 +6,7 @@ import Link from "next/link";
 import ProtectedRoute from "@/components/auth/ProtectedRoute";
 import ListOfMovies from "../../components/other/ListOfMovies/ListOfMovies";
 import { useRouter } from "next/navigation";
+import Styles from "./MovieListPage.module.css";
 
 interface Movie {
     _id: string;
@@ -26,7 +27,7 @@ export default function MovieList() {
     const [moviesData, setMoviesData] = useState<PaginatedMovies>({
         data: [],
         page: 1,
-        limit: 10,
+        limit: 8,
         totalPage: 1,
         totalCount: 0,
     });
@@ -44,17 +45,18 @@ export default function MovieList() {
             axios.defaults.headers.get["Authorization"] = token;
             axios.defaults.headers.common["Content-Type"] = "application/json";
 
-            const response = await axios.get('http://3.144.22.101/api/movies', {
+            const response = await axios.get("http://3.144.22.101/api/movies", {
                 params: {
                     page: moviesData.page,
-                    limit: moviesData.limit
+                    limit: moviesData.limit,
                 },
                 headers: {
                     Authorization: token,
-                    'Content-Type': 'application/json'
-                }
+                    "Content-Type": "application/json",
+                },
             });
             const data = await response.data;
+            console.log("mmm", data);
             setMoviesData(data);
         } catch (error) {
             console.error("Error fetching movies:", error);
@@ -80,7 +82,9 @@ export default function MovieList() {
         <ProtectedRoute>
             <div className="container mx-auto">
                 <div className="flex justify-between mx-10 my-10 ">
-                    <h2 className="flex align-bottom gap-2 items-center">
+                    <h2
+                        className={`${Styles.mymovie} flex align-bottom gap-2 items-center`}
+                    >
                         My movies
                         <Link href="/CreateMovie">
                             <Image
