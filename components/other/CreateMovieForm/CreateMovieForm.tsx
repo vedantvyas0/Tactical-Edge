@@ -109,7 +109,7 @@ export default function CreateMovieForm() {
 
     return (
         <>
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <form onSubmit={handleSubmit(onSubmit)} className={Styles.form}>
                 <div className={Styles.flexContainer}>
                     <div className={`${Styles.uploadDiv} mt-10 mx-5`}>
                         <p

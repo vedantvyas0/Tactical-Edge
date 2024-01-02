@@ -29,7 +29,7 @@ export default function RootLayout({
                     crossOrigin="anonymous"
                 />
             </Head>
-            <body className={inter.className}>
+            <body className={`${inter.className} h-full`}>
                 {children}
                 <FooterDesign />
             </body>

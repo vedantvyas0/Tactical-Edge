@@ -76,9 +76,29 @@ export default function MovieList() {
 
     if (loading) {
         return (
-            <p className="flex justify-center align-middle my-10 min-h-screen">
-                Loading...
-            </p>
+            <ProtectedRoute>
+                <p className="flex justify-center align-middle my-10 min-h-screen">
+                    Loading...
+                </p>
+            </ProtectedRoute>
+        );
+    }
+
+    if (moviesData.data) {
+        return (
+            <ProtectedRoute>
+                <div className="h-screen">
+                    <div className="flex flex-col  row-span-3 mx-auto text-center align-middle justify-center mt-40">
+                        <h2>Your movie list is empty</h2>
+                        <button
+                            className={`${Styles.submitBtn} mx-auto`}
+                            onClick={() => router.push("/CreateMovie")}
+                        >
+                            Add a new Movie
+                        </button>
+                    </div>
+                </div>
+            </ProtectedRoute>
         );
     }
 
