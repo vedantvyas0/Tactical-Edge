@@ -1,6 +1,9 @@
 {
-  "/not-found": "app/not-found.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/_not-found": "app/_not-found.js",
+  "/CreateMovie/page": "app/CreateMovie/page.js",
+  "/EditMovie/[id]/page": "app/EditMovie/[id]/page.js",
+  "/EditMovie/page": "app/EditMovie/page.js",
   "/MovieList/page": "app/MovieList/page.js",
-  "/CreateMovie/page": "app/CreateMovie/page.js"
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/page": "app/page.js"
 }
