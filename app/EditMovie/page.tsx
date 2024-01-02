@@ -8,7 +8,6 @@ export default function page() {
             <ProtectedRoute>
                 <div className="container mx-auto">
                     <h2 className="mt-10">Edit</h2>
-                    <EditMovieForm />
                 </div>
             </ProtectedRoute>
         </>
