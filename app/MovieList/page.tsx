@@ -84,7 +84,7 @@ export default function MovieList() {
         );
     }
 
-    if (moviesData.data) {
+    if (moviesData.data.length === 0) {
         return (
             <ProtectedRoute>
                 <div className="h-screen">
