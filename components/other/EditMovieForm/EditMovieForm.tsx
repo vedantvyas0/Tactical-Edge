@@ -6,8 +6,7 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Input from "@/components/UI/Input/Input";
-import { title } from "process";
-import jwtDecode from "jwt-decode";
+import { useRouter } from "next/navigation";
 import axios from "axios";
 
 const ACCEPTED_IMAGE_TYPES = [
@@ -45,7 +44,14 @@ interface FormData {
     image?: FileList;
 }
 
-export default function EditMovieForm({ defaultValues }: EditMovieFormProps) {
+interface EditPageProps {
+    params: string;
+}
+
+export default function EditMovieForm({
+    defaultValues,
+    params,
+}: EditMovieFormProps & EditPageProps) {
     const {
         control,
         handleSubmit,
@@ -59,6 +65,7 @@ export default function EditMovieForm({ defaultValues }: EditMovieFormProps) {
     const fileInputRef = useRef<HTMLInputElement | null>(null);
     const thumbnailRef = useRef<HTMLImageElement | null>(null);
     const [imageFile, setImageFile] = useState<any>(null);
+    const router = useRouter();
 
     const handleFileInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const selectedFile = e.target.files?.[0];
@@ -78,9 +85,12 @@ export default function EditMovieForm({ defaultValues }: EditMovieFormProps) {
         // You can perform additional logic or state updates here
     };
 
+    console.log("ii", imageFile);
     const handleUploadTextClick = () => {
         fileInputRef.current?.click();
     };
+
+    console.log("parmas", params);
 
     const handleCancel = () => {
         // Your logic to handle cancel button click
@@ -92,27 +102,26 @@ export default function EditMovieForm({ defaultValues }: EditMovieFormProps) {
         const formData = new FormData();
         formData.append("title", data.title);
         formData.append("publishing_year", data.publishing_year);
-        formData.append("image", imageFile);
+        if (imageFile) {
+            formData.append("image", imageFile);
+        }
 
         // Alternatively, if you want to log the entire FormData object
-        console.log("FormData Object:", JSON.stringify(formData));
 
         try {
             const token = localStorage.getItem("token");
-            // axios.defaults.headers.post["Authorization"] = token;
-            // axios.defaults.headers.common["Content-Type"] = "application/json";
+            axios.defaults.headers.put["Authorization"] = token;
+            axios.defaults.headers.common["Content-Type"] =
+                "multipart/form-data";
 
-            const response = await axios.post(
-                "http://3.144.22.101/api/movies",
-                formData,
-                {
-                    headers: {
-                        Authorization: `${token}`,
-                    },
-                }
+            const response = await axios.put(
+                `http://3.144.22.101/api/movies/${params}`,
+                formData
             );
             const data = await response.data;
-            console.log("dd", data);
+            if (response.status === 200) {
+                router.push("/MovieList");
+            }
         } catch (error) {
             console.error("Error fetching movies:", error);
         } finally {

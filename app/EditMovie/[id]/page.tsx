@@ -16,6 +16,7 @@ interface Movie {
     title: string;
     publishing_year: string;
     user_id: string;
+    image_url: string;
 }
 
 interface PaginatedMovies {
@@ -61,7 +62,10 @@ export default function EditPage({ params }: EditPageProps) {
                     <h2 className="flex align-bottom gap-2 m-6 items-center">
                         Edit
                     </h2>
-                    <EditMovieForm defaultValues={movieData} />
+                    <EditMovieForm
+                        defaultValues={movieData}
+                        params={params.id}
+                    />
                 </>
             )}
         </div>
