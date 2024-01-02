@@ -81,7 +81,7 @@ export default function MovieList() {
     return (
         <ProtectedRoute>
             <div className="container mx-auto">
-                <div className="flex justify-between mx-10 my-10 ">
+                <div className="flex justify-between mx-10 my-10 h-full ">
                     <h2
                         className={`${Styles.mymovie} flex align-bottom gap-2 items-center`}
                     >
@@ -98,7 +98,7 @@ export default function MovieList() {
                         </Link>
                     </h2>
                     <p
-                        className="flex gap-2 items-center"
+                        className={`flex gap-2 items-center ${Styles.logout}`}
                         onClick={handleLogout}
                     >
                         Logout

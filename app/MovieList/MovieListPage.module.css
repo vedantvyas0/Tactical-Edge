@@ -4,6 +4,10 @@
     margin-top: 200px;
 }
 
+.logout {
+    cursor: pointer;
+}
+
 .submitBtn {
     background-color: var(--primary-color);
     color: #fff;

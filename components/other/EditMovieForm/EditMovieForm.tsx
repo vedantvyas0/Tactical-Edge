@@ -92,7 +92,7 @@ export default function EditMovieForm({
 
     const handleCancel = () => {
         // Your logic to handle cancel button click
-        console.log("Cancel button clicked");
+        router.push("/MovieList");
     };
 
     const onSubmit: SubmitHandler<FormData> = async data => {
