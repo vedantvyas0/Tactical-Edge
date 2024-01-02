@@ -1,0 +1,66 @@
+{
+  "pages": {
+    "/_not-found": [
+      "static/chunks/webpack-61b79b840403f93c.js",
+      "static/chunks/fd9d1056-a75fe3ba478e1b58.js",
+      "static/chunks/938-99f8db49fa658888.js",
+      "static/chunks/main-app-501060bf60a85da0.js",
+      "static/chunks/app/_not-found-f9f32029a035af2d.js"
+    ],
+    "/layout": [
+      "static/chunks/webpack-61b79b840403f93c.js",
+      "static/chunks/fd9d1056-a75fe3ba478e1b58.js",
+      "static/chunks/938-99f8db49fa658888.js",
+      "static/chunks/main-app-501060bf60a85da0.js",
+      "static/css/96ec23dbb2f79568.css",
+      "static/chunks/app/layout-d1b2e3f96f0c4d75.js"
+    ],
+    "/CreateMovie/page": [
+      "static/chunks/webpack-61b79b840403f93c.js",
+      "static/chunks/fd9d1056-a75fe3ba478e1b58.js",
+      "static/chunks/938-99f8db49fa658888.js",
+      "static/chunks/main-app-501060bf60a85da0.js",
+      "static/chunks/630-127c52e659dd5ad3.js",
+      "static/chunks/329-c3b810228afe2b70.js",
+      "static/css/21587d94da963967.css",
+      "static/chunks/app/CreateMovie/page-278ed8b244ae6caa.js"
+    ],
+    "/EditMovie/[id]/page": [
+      "static/chunks/webpack-61b79b840403f93c.js",
+      "static/chunks/fd9d1056-a75fe3ba478e1b58.js",
+      "static/chunks/938-99f8db49fa658888.js",
+      "static/chunks/main-app-501060bf60a85da0.js",
+      "static/chunks/630-127c52e659dd5ad3.js",
+      "static/chunks/329-c3b810228afe2b70.js",
+      "static/css/52ac94db0fc7db33.css",
+      "static/chunks/app/EditMovie/[id]/page-ad5af7dfb9b18254.js"
+    ],
+    "/EditMovie/page": [
+      "static/chunks/webpack-61b79b840403f93c.js",
+      "static/chunks/fd9d1056-a75fe3ba478e1b58.js",
+      "static/chunks/938-99f8db49fa658888.js",
+      "static/chunks/main-app-501060bf60a85da0.js",
+      "static/chunks/app/EditMovie/page-859b25a0946679e9.js"
+    ],
+    "/MovieList/page": [
+      "static/chunks/webpack-61b79b840403f93c.js",
+      "static/chunks/fd9d1056-a75fe3ba478e1b58.js",
+      "static/chunks/938-99f8db49fa658888.js",
+      "static/chunks/main-app-501060bf60a85da0.js",
+      "static/chunks/630-127c52e659dd5ad3.js",
+      "static/chunks/360-6eaceeb53b4d4c48.js",
+      "static/css/a2b6570af4c23ab5.css",
+      "static/chunks/app/MovieList/page-9f79f4937b987fb7.js"
+    ],
+    "/page": [
+      "static/chunks/webpack-61b79b840403f93c.js",
+      "static/chunks/fd9d1056-a75fe3ba478e1b58.js",
+      "static/chunks/938-99f8db49fa658888.js",
+      "static/chunks/main-app-501060bf60a85da0.js",
+      "static/chunks/630-127c52e659dd5ad3.js",
+      "static/chunks/329-c3b810228afe2b70.js",
+      "static/css/58e80173ab6c0518.css",
+      "static/chunks/app/page-d567e95740e8f0e0.js"
+    ]
+  }
+}
