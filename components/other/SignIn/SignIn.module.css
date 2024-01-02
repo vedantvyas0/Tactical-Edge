@@ -7,7 +7,8 @@
 }
 
 .checkbox {
-    color: #fff;
+    color: var(--input-color) !important;
+    background-color: var(--input-color) !important;
     padding-left: 20px;
 }
 

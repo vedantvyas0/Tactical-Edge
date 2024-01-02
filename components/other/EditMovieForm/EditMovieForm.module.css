@@ -40,6 +40,7 @@
     height: 56px;
     border-radius: 10px;
     border: 1px solid #fff;
+    font-weight: 700;
 }
 
 .submitBtn {
@@ -48,6 +49,7 @@
     border-radius: 10px;
     border: 1px solid #fff;
     background: #2bd17e;
+    font-weight: 700;
 }
 
 .flexContainer {

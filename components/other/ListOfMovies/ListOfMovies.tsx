@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import Styles from "./ListOfMovies.module.css";
 import Link from "next/link";
@@ -26,13 +26,23 @@ const ListOfMovies: React.FC<ListOfMoviesProps> = ({
     totalMovies,
     onPageChange,
 }) => {
-    const startIndex = (currentPage - 1) * itemsPerPage;
-    const endIndex = startIndex + itemsPerPage;
+    // const startIndex = (currentPage - 1) * itemsPerPage;
+    // const endIndex = startIndex + itemsPerPage;
 
-    const displayedMovies = movies.slice(startIndex, endIndex);
+    // const displayedMovies = movies.slice(startIndex, endIndex);
+
+    // const totalPages = Math.ceil(totalMovies / itemsPerPage);
+
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = Math.min(startIndex + itemsPerPage, totalMovies);
+
+    let displayedMovies = movies.slice(startIndex, endIndex);
+
+    if (displayedMovies.length <= 0) {
+        displayedMovies = movies;
+    }
 
     const totalPages = Math.ceil(totalMovies / itemsPerPage);
-
 
     const handlePrevClick = () => {
         if (currentPage > 1) {
@@ -41,31 +51,39 @@ const ListOfMovies: React.FC<ListOfMoviesProps> = ({
     };
 
     const handleNextClick = () => {
-        if (currentPage < totalPages) {
+        if (currentPage <= totalPages) {
             onPageChange(currentPage + 1);
         }
     };
 
+    console.log("fff", displayedMovies);
+
     return (
         <>
             <div
-                className={`${Styles.flexContainer} flex flex-wrap md:gap-8 lg:gap-20 sm:gap-1`}
+                className={`${Styles.flexContainer} flex flex-wrap md:gap-6 lg:gap-8 sm:gap-1`}
             >
                 {displayedMovies.map(movie => (
                     <div
                         key={movie._id}
                         className={`${Styles.moviecard} mx-auto sm:flex-basis-1/2 md:flex-basis-1/3 lg:flex-basis-1/4`}
                     >
-
                         <Link href={`/EditMovie/${movie._id}`}>
-                            <Image
-                                alt={movie.title}
-                                title={movie.title}
-                                width={266}
-                                height={400}
-                                src={`${movie?.image_url}`}
-                                className=" max-w-full object-fill  h-auto mx-auto"
-                            />
+                            <div
+                                style={{
+                                    width: "266px",
+                                    height: "400px",
+                                }}
+                            >
+                                <Image
+                                    alt={movie.title}
+                                    title={movie.title}
+                                    width={266}
+                                    height={400}
+                                    src={`${movie?.image_url}`}
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
                             <p className={Styles.movieTitle}>{movie.title}</p>
                             <p className={Styles.publishingYear}>
                                 {movie.publishing_year}
@@ -73,7 +91,6 @@ const ListOfMovies: React.FC<ListOfMoviesProps> = ({
                         </Link>
                     </div>
                 ))}
-
             </div>
             <div className="mx-auto mt-6 flex gap-x-3 justify-center text-center">
                 <button
