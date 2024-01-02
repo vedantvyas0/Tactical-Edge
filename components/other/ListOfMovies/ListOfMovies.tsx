@@ -56,8 +56,6 @@ const ListOfMovies: React.FC<ListOfMoviesProps> = ({
         }
     };
 
-    console.log("fff", displayedMovies);
-
     return (
         <>
             <div

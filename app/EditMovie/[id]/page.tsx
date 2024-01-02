@@ -40,10 +40,10 @@ export default function EditPage({ params }: EditPageProps) {
             axios.defaults.headers.common["Content-Type"] = "application/json";
 
             const response = await axios.get(
-                `http://3.144.22.101/api/movies/${params.id}`
+                `http://3.17.6.121/api/movies/${params.id}`
             );
             const data = await response.data;
-            console.log("Movie Data:", data);
+
             setMovieData(data);
         } catch (error) {
             console.error("Error fetching movie:", error);

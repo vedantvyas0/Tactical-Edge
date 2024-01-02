@@ -69,7 +69,7 @@ export default function EditMovieForm({
 
     const handleFileInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const selectedFile = e.target.files?.[0];
-        console.log("Selected file:", selectedFile);
+
         setImageFile(selectedFile);
 
         // Update the thumbnail preview
@@ -90,15 +90,12 @@ export default function EditMovieForm({
         fileInputRef.current?.click();
     };
 
-    console.log("parmas", params);
-
     const handleCancel = () => {
         // Your logic to handle cancel button click
         console.log("Cancel button clicked");
     };
 
     const onSubmit: SubmitHandler<FormData> = async data => {
-        console.log("iimg", data);
         const formData = new FormData();
         formData.append("title", data.title);
         formData.append("publishing_year", data.publishing_year);
@@ -115,7 +112,7 @@ export default function EditMovieForm({
                 "multipart/form-data";
 
             const response = await axios.put(
-                `http://3.144.22.101/api/movies/${params}`,
+                `http://3.17.6.121/api/movies/${params}`,
                 formData
             );
             const data = await response.data;

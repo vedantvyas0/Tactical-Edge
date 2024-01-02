@@ -94,7 +94,7 @@ export default function CreateMovieForm() {
                 "multipart/form-data";
 
             const response = await axios.post(
-                "http://3.144.22.101/api/movies",
+                "http://3.17.6.121/api/movies",
                 formData
             );
             const data = await response.data;
